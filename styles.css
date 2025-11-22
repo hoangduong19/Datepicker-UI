@@ -1,0 +1,146 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main {
+    width: max-content;
+    height: auto;
+    margin: 2rem auto;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.input {
+    border: 0.1rem solid black;
+    align-items: stretch;
+}
+.input-placeholder {
+    flex: 1;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 0.25rem 0.25rem 0.25rem 1rem;
+}
+.input-placeholder::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.1rem;
+    background: black;
+}
+.input-icon {
+    height:2.5rem;
+    padding: 0.25rem;
+    
+}
+.input-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.year-selection {
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.arrow-left {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.arrow-right {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.calendar {
+    margin-top: 0.2rem;
+    border: 0.1rem solid black;
+}
+
+.calendar-header {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+.day-element{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 0.5rem;
+    
+}
+.day-element >div {
+    border-right: 0.1rem solid gray;
+    border-bottom: 0.1rem solid gray;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+.day-element > div:nth-child(-n + 7) {
+    border-bottom:0.1rem solid black;
+    border-right: 0;
+}
+.day-element > div:nth-child(7n) {
+    border-right: 0;
+}
+.day-element >div:nth-child(n + 36) {
+    border-bottom: 0;
+}
